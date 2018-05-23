@@ -44,20 +44,79 @@ table {
 }
 
 /*Designing the website */
-.main-header {
-  padding-top:;
-  height: 400px;
-  background: #ffa949 url('img/main-pic.jpeg') no-repeat center;
-  background-size: cover;
-  color: #FFFFFF
+
+
+* {
+	margin: 0;
+	padding: 0;
+	user-select: none;
 }
 
-
-h1 {
-  padding-top: 50px;
-  font-size: 56px;
+body {
+	margin: 0;
+	background: #222;
+	font-family: "Work Sans", sans-serif;
+	font-weight: 400;
 }
 
-span {
-  font-style: italic;
+.container{
+	width: 80%;
+	margin: 0 auto;
+}
+
+header {
+	background: #55d6aa;
+}
+
+header::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+nav{
+	float: right;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav li {
+	display: inline-block;
+	margin-left: 70px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+
+	position: relative;
+}
+
+nav a {
+		color: #444;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 14px;
+}
+
+nav a:hover {
+	cover: #000;
+}
+
+nav a::before {
+content:'';
+display: block;
+height: 2px;
+background-color: #444;
+
+position: absolute;
+top: 0;
+width: 0%;
+
+transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+	width: 100%;
 }
