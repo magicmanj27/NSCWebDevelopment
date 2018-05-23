@@ -47,6 +47,7 @@ table {
 
 
 * {
+	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 	user-select: none;
@@ -111,7 +112,8 @@ height: 2px;
 background-color: #444;
 
 position: absolute;
-top: 0;
+/* bottom: 0%; */
+top: 0%;
 width: 0%;
 
 transition: all ease-in-out 250ms;
@@ -119,4 +121,75 @@ transition: all ease-in-out 250ms;
 
 nav a:hover::before {
 	width: 100%;
+}
+
+#lead-banner img {
+	width: 100%;
+}
+
+#lead-banner {
+	max-height: 400px;
+	overflow: hidden;
+	position: relative;
+}
+
+.banner-overlay {
+	position: absolute;
+	top: 20%;
+	width: 100%;
+}
+
+.banner-title {
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 72px;
+	text-align: center;
+}
+
+.banner-paragraph {
+	text-align: center;
+	font-size: 24px;
+	font-weight: 400;
+	color: #fff;
+	margin-top: 20px;
+
+}
+
+.banner-link {
+
+	color: #fff;
+  /* display: ; */
+	margin: 0 auto;
+	text-align: center !important;
+	float: center;
+	padding-top: 50px;
+	width: 300px;
+	font-size: 30px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 5px;
+	text-transform: uppercase;
+	position: relative;
+}
+
+.banner-link::before {
+content:'';
+display: block;
+height: 2px;
+background-color: #fff;
+
+position: absolute;
+bottom: 0%;
+/* top: 0%; */
+width: 0%;
+
+transition: all ease-in-out 250ms;
+}
+.banner-link:hover::before {
+	width: 100%;
+	padding-left: 10px;
+}
+
+.banner-link:hover {
+	cover: #000;
 }
